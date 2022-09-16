@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Jscell.js" defer></script>
+    <link rel="stylesheet" href="Jscell.css">
+    <title>Curso de JS cell</title>
+</head>
+<body>
+    <div class="box">
+        <h1>Curso JS</h1>
+    </div>
+        <h2>Calculadora de IMC</h2>
+            <p>Vamos a calcular el indice de masa corporal usando html y javascript</p>
+                <form action="">
+                    <label for="">Peso:</label> <input id="txtPeso" type="text">
+                    <label for="">Altura:</label> <input id="txtAltura" type="text">
+                    <button id="btnCalcular">Calcular</button>
+                </form>
+                    <p id="resultadoIMC"></p>
+                        <br>
+                            <img src="tablaimc.png" alt="">
+        <h2>Calculadora HTML</h2>
+                <input type="text" id="op1" placeholder="Operador 1">
+                <input type="text" id="operacion" placeholder="+,-,*,/">
+                <input type="text" id="op2" placeholder="operador 2">
+                <input type="submit" value="Calcular" id="bCalcular">
+                <p id="resultadoCH"></p>
+        <h2>Matrices y Arreglos</h2>
+            <p>Ejercicio de ejemplo</p>
+                <label>Tarea: </label> <input type="text" id="txtTarea">
+                    <button id="btnAgregar">Agregar</button>
+                <div id="listado">
+                </div>
+        <h2>Debug y devtools</h2>
+            <p>Son herramientas del navegador, usaremos el Codigo JS del anterior ejercicio como ejemplo<br><br>
+                var tareas = []; <br>
+            
+                var btnAgregar = document.getElementById("btnAgregar"); <br>
+                btnAgregar.addEventListener("click", clickBtnAgregar); <br>
+                        
+                function clickBtnAgregar(){ <br>
+                var txtTarea = document.getElementById("txtTarea"); <br>
+                var tarea = txtTarea.value <br>
+                tareas.push(tarea); <br>
+                mostrarTareas(); <br>
+                } <br>
+                        
+                function mostrarTareas(){ <br>
+                var listado = document.getElementById("listado") <br>
+                var html = ""; <br>
+                <strong>debugger;</strong> NOS AYUDA A ENCONTRAR EL ERROR PASO A PASO <br>
+                for (var tarea of tareas) { <br>
+                    html += tarea + "</br>"; <br>
+                } <br>
+                listado.innerHTML = html; <br>
+                } <br>
+            </p>
+        <h2>Objetos</h2>
+            <label>Nombre</label><input id="txtNombre" type="text"><br>
+            <label>Apellido</label><input id="txtApellido" type="text"><br>
+            <label>Telefono</label><input id="txtTelefono" type="text"><br>
+            <label>Gmail</label><input id="txtGmail" type="text"><br>
+            <button id="btnAgregar2">Agregar</button>
+                <div id="listado2"></div>
+        <h2>Localstorage</h2>
+            Nota <input id="txtNota" type="text">
+                <button id="btnAgregar3">Agregar</button>
+                <button id="btnBorrar">Borrar</button>
+                    <p id="pNotas"></p>
+        <h2>DOM (Document Objet Model)</h2>
+            <img src="dom.png" alt="" width="500px">
+</body>
+</html>
